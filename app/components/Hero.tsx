@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { HiArrowDown } from 'react-icons/hi';
 import Link from 'next/link';
 
-const Hero: React.FC<{}> = () => {
+const Hero: React.FC = () => {
     return (
         <section id="home">
             <div className="flex flex-col md:flex-row text-center items-center justify-center my-10 py-16 sm:py-32 md:py-48 md:space-x-4 md:text-left">

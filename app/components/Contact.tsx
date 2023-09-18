@@ -1,17 +1,16 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionHeader from './SectionHeader';
 import Container from './Container';
 
 import { RiCheckFill, RiErrorWarningLine } from 'react-icons/ri';
 
-const Contact: React.FC<{}> = () => {
+const Contact: React.FC = () => {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
     const [error, setError] = useState<Array<string>>([]);
     const [success, setSucess] = useState<boolean>(false);
-
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
     const handleSubmit = async (event: React.SyntheticEvent) => {
@@ -35,6 +34,15 @@ const Contact: React.FC<{}> = () => {
             setMessage('');
         }
     };
+
+    useEffect(() => {
+        if (success) {
+            setTimeout(() => {
+                setSucess(false);
+                setError([]);
+            }, 5000);
+        }
+    }, [success]);
 
     return (
         <Container id="contact">
@@ -66,7 +74,7 @@ const Contact: React.FC<{}> = () => {
                                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                             />
                                         </svg>
-                                        Sending message . . .
+                                        Sending message ...
                                     </div>
                                 ) : (
                                     <div>Send message</div>

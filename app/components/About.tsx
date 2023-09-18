@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader';
 import Container from './Container';
 import Link from 'next/link';
 
-const About: React.FC<{}> = () => {
+const About: React.FC = () => {
     return (
         <Container id="about">
             <>

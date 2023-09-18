@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 
-const Footer: React.FC<{}> = () => {
+const Footer: React.FC = () => {
     return (
         <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
             <hr className="w-full h-0.5 mx-auto mt-8 bg-pink-500 border-0"></hr>

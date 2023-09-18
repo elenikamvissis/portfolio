@@ -24,7 +24,7 @@ const SKILL_ITEMS: Array<SkillItem> = [
     { skill: 'GitHub' }
 ];
 
-const Skills: React.FC<{}> = () => {
+const Skills: React.FC = () => {
     return (
         <Container id="skills">
             <>
