@@ -21,7 +21,7 @@ const NavBar: React.FC<{}> = () => {
     const [navBar, setNavBar] = useState<boolean>(false);
 
     return (
-        <header className="w-full mx-auto px-4 bg-slate-50 shadow fixed top-0 z-50 xs:px-20">
+        <header className="w-full mx-auto px-4 bg-pink-50 shadow md:shadow-none md:bg-gradient-to-b md:from-pink-100 md:to-white fixed top-0 z-50 xs:px-20">
             <div className="md:flex md:items-center justify-between">
                 <div className="flex items-center justify-between py-3 ">
                     <div className="flex flex-row items-center">

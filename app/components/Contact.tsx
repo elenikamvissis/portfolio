@@ -36,7 +36,7 @@ const Contact: React.FC<{}> = () => {
         <Container id="contact">
             <>
                 <SectionHeader title="Contact me" />
-                <div className="pb-28">
+                <div>
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name">Name</label>
