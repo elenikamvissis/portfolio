@@ -3,15 +3,13 @@ import React, { useState } from 'react';
 import SectionHeader from './SectionHeader';
 import Container from './Container';
 
-interface IError {
-    message: string;
-}
+import { RiCheckFill, RiErrorWarningLine } from 'react-icons/ri';
 
 const Contact: React.FC<{}> = () => {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
-    const [error, setError] = useState<IError[]>([]);
+    const [error, setError] = useState<Array<string>>([]);
     const [success, setSucess] = useState<boolean>(false);
 
     const handleSubmit = async (event: React.SyntheticEvent) => {
@@ -58,16 +56,25 @@ const Contact: React.FC<{}> = () => {
                             </button>
                         </div>
                     </form>
-                    {success === false && error.length > 0 && (
+                    {!!success === false && error.length > 0 && (
                         <div className="bg-slate-100 flex flex-col mt-4 p-4">
                             {error.map((err, index) => (
-                                <div key={index} className="text-pink-600">
-                                    {err.message}
+                                <div key={index} className="text-pink-600 flex flex-row items-center">
+                                    <RiErrorWarningLine style={{ marginRight: '8px' }} /> {err}
                                 </div>
                             ))}
                         </div>
                     )}
-                    {success && <div className="bg-slate-100 flex flex-col mt-4 p-4">{success && <div className="text-slate-600">Message sent!</div>}</div>}
+                    {!!success === true && (
+                        <div className="bg-slate-100 flex flex-col mt-4 p-4">
+                            {success && (
+                                <div className="flex flex-row items-center text-emerald-600">
+                                    <RiCheckFill style={{ marginRight: '8px' }} />
+                                    Message sent!
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </>
         </Container>
