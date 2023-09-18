@@ -13,7 +13,7 @@ const About: React.FC<{}> = () => {
                 <div className="flex flex-col space-y-10 justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row">
                     <div className="md:w-1/2 space-y-8">
                         <p className="indent-4">
-                            I&#39;m Eleni Kamvissis, a frontend developer based in the lovely city of Malmö, Sweden. My journey into the world of tech took a somewhat unconventional route.
+                            I&#39;m Eleni Kamvissis, a front-end developer based in the lovely city of Malmö, Sweden. My journey into the world of tech took a somewhat unconventional route.
                         </p>
 
                         <p className="indent-4">
@@ -24,8 +24,7 @@ const About: React.FC<{}> = () => {
                         </p>
 
                         <p className="indent-4">
-                            Motivated by this realization, I decided to pivot my career toward addressing these user interface challenges. And here I am today, thriving as a front-end developer. Life
-                            has a way of guiding us down unexpected but fulfilling paths, doesn&#39;t it?
+                            Motivated by this realization, I decided to pivot my career toward addressing these user interface challenges. And here I am today, thriving as a front-end developer.
                         </p>
 
                         <p className="indent-4">
