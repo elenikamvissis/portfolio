@@ -10,7 +10,7 @@ const About: React.FC = () => {
             <>
                 <SectionHeader title="About me" />
 
-                <div className="flex flex-col space-y-10 font-medium justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row">
+                <div className="flex flex-col space-y-10 md:font-medium justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row">
                     <div className="md:w-1/2 space-y-8">
                         <p className="indent-4 flex flex-row">
                             I&#39;m Eleni Kamvissis, a front-end developer based in the lovely city of Malmö, Sweden. My journey into the world of tech took a somewhat unconventional route.
